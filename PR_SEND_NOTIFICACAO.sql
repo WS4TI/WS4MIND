@@ -11,9 +11,10 @@ set define off;
                                                ,p_enviar_email    IN VARCHAR2) IS
    l_vc_arr2      apex_application_global.vc_arr2;
    v_usuario_de   VARCHAR2(20);
-   v_email_de     VARCHAR2(50);
    v_usuario_para VARCHAR2(20);
+   v_email_de     VARCHAR2(50);   
    v_email_para   VARCHAR2(50);
+   v_email_para2  VARCHAR2(400);
    --v_servidor_email cdmcon.wms_parceira.nm_servidor_email%TYPE;
    v_erro VARCHAR2(32767);
    l_body   CLOB;
@@ -55,6 +56,7 @@ BEGIN
             END;
             --
             IF v_usuario_para IS NOT NULL THEN
+               v_email_para2 := v_email_para2||','||v_email_para;
                --
                BEGIN
                   INSERT INTO cliente_notifica
@@ -79,20 +81,20 @@ BEGIN
                      ,'N');
                EXCEPTION
                   WHEN OTHERS THEN
-                     raise_application_error(-20000, 'Erro inserindo dados da Notificação ''''JOSELUIS.PR_SEND_NOTIFICACAO'''' | ' || SQLERRM);
+                     raise_application_error(-20000, 'Erro inserindo dados da Notificação ''''PR_SEND_NOTIFICACAO'''' | ' || SQLERRM);
                END;
                --
                COMMIT;
             END IF;
-            -- Enviar e-mail            
-            IF p_enviar_email = 'S' THEN
-              PR_SEND_MAIL( P_TITULO => p_ds_titulo,
-                            P_MENSAGEM => p_ds_notificacao,
-                            P_DE => v_email_de,
-                            P_PARA => v_email_para
-                          );
-            END IF;
          END LOOP;
+         -- Enviar e-mail            
+         IF (p_enviar_email='S' AND v_email_para2 IS NOT NULL) THEN
+           PR_SEND_MAIL( P_TITULO => p_ds_titulo,
+                         P_MENSAGEM => p_ds_notificacao,
+                         P_DE => v_email_de,
+                         P_PARA => v_email_para2
+                        );         
+         END IF;         
          --
       END IF;
    END;
