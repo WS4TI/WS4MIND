@@ -88,8 +88,8 @@ BEGIN
             IF p_enviar_email = 'S' THEN
               PR_SEND_MAIL( P_TITULO => p_ds_titulo,
                             P_MENSAGEM => p_ds_notificacao,
-                            P_DE => 'jose.costa@microservice.com.br',
-                            P_PARA => 'costafortes@gmail.com'
+                            P_DE => v_email_de,
+                            P_PARA => v_email_para
                           );
             END IF;
          END LOOP;
