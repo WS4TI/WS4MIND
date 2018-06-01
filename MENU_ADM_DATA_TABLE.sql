@@ -1,0 +1,22 @@
+REM INSERTING into WS4TI.MENU_ADM
+SET DEFINE OFF;
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('4','1','Turno de Trabalho','8',null,'1','J','N');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('6','1','Usuário','3',null,'3','J','N');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('9','2','Ordem de Serviço','24','Ordem de Serviço',null,'J','S');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('8','1','Histórico Notificações','26',null,null,'J','S');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('13','3','Fabricante','11',null,'1','J','S');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('14','3','Máquina/Equip.','15',null,'2','J','S');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('15','3','Grupo Máq/Equip.','13',null,'4','J','N');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('16','3','Check List','4',null,'5','J','N');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('17','3','Programação','39',null,'6','J','N');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('18','3','TRO','21','Tempo Real de Operação','7','J','N');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('5','1','Grupo Usuário','6',null,'2','J','N');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('7','1','Calendário','2',null,null,'J','N');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('3',null,'Máquina/Equipamento',null,null,null,'J','S');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('12','2','Classificação OS','29','Classificação de Problema apontados na OS',null,'J','N');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('10','2','Alertas',null,null,null,'J','N');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('11','2','Tipo de Manutenção','18',null,null,'J','N');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('19',null,'Índices',null,'Índices de performance',null,'J','N');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('1',null,'Parametrizações',null,null,null,'J','S');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('2',null,'Ordem de Serviço',null,null,null,'J','S');
+Insert into WS4TI.MENU_ADM (MNU_ID,MNU_PAI_ID,MNU_NOME,MNU_PAGINA,MNU_TOOLTIP,MNU_ORDEM,MNU_TIPO,MNU_TECNICO) values ('20','19','NOC - Ocorrências Corretivas',null,'Número de ocorrências corretivas',null,'J','N');

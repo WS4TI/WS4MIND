@@ -1,0 +1,49 @@
+REM INSERTING into WS4TI.CLIENTE_AGENDA
+SET DEFINE OFF;
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','3','LCOSTA','IP16 – Informática','Validar atendimento dos chamados e preencher documento IP16 – Informática até o dia 10','0',to_date('10/08/16','DD/MM/RR'),to_date('10/08/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','5','LCOSTA','RedMaxx Summit 2016','"2o dia – Quick Technical Talks (Tarde)
+13:30 as 14:00 – CREDENCIAMENTO
+14:00 as 15:00– IBM – Sr. Juliano Carbonesi – “Watson Analytics -
+Computação Cognitiva. “
+15:00 as 15:30 – PAUSA – Coffee-Brake
+15:30 as 16:00 – AEROHIVE – Sr. Kleber Freitas – “A T.I foi para Nuvem. “
+16:00 as 16:30 – REDMAXX – Sr. Bruno Brandão – “BPM: a gestão por
+processos como aliada da análise de negócios. “
+16:30 as 17:00 – REDMAXX – Sr. Clayson Carvalho – “Governança de T.I –
+Fundamentos e Relevâncias
+17:00 as 17:30 – PRODAM – Sr. Antônio Farias – Cloud Computing & Direct
+Connection – Ofertas para o mercado local"','0',to_date('17/08/16','DD/MM/RR'),to_date('17/08/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','6','MILENE','Reuniao Gestores',null,'0',to_date('12/08/16','DD/MM/RR'),null);
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','7','MILENE','teste',null,'0',to_date('12/08/16','DD/MM/RR'),to_date('12/08/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','18','LCOSTA','Magélio','Horácio Comercial','0',to_date('31/08/16','DD/MM/RR'),to_date('31/08/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','17','LCOSTA','Visita RedMaxx','Marcio Lins da RedMaxx','0',to_date('30/08/16','DD/MM/RR'),to_date('26/08/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','20','LCOSTA','Igor','Horário Comercial','0',to_date('01/09/16','DD/MM/RR'),to_date('01/09/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','26','LCOSTA','Troca de Feriado','"Tendo em vista a aprovação, por 98% dos colaboradores, para troca do dia 12/10 pelo dia 14/11, o expediente na Micro Manaus amanhã 12/10 será normal e no dia 14/11, não haverá expediente. Em função disso as rotas farão seus percursos normais."','0',to_date('12/10/16','DD/MM/RR'),to_date('12/10/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','37','LCOSTA','Viajem de férias','"Meu voo sai as 15:17 por isso saio depois do almoço de hoje, ok!"','0',to_date('16/12/16','DD/MM/RR'),to_date('16/12/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','14','PATRICIA','Webinar BlocoK','Palestra On-line','0',to_date('01/09/16','DD/MM/RR'),to_date('01/09/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','24','LCOSTA','Mudança TI para prédio 1','"Vamos mudar para a sala onde hoje fica o CQ, nosso depósito também vai compartilhar o depósito de CQ na mesma sala..."','0',to_date('10/10/16','DD/MM/RR'),to_date('11/10/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','31','LCOSTA','Magélio | José Luís',null,'0',to_date('28/10/16','DD/MM/RR'),to_date('28/10/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','8','LCOSTA','José Luís (Fora motivo particular)','Vou estar fora no período da manhã para evento na escola dos meus filhos mas devo estar de volta ~10:00hs ok!','0',to_date('12/08/16','DD/MM/RR'),to_date('12/08/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','29','LCOSTA','Magélio | José Luís','Escala de trabalho TI Manaus','0',to_date('26/10/16','DD/MM/RR'),to_date('26/10/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','38','LCOSTA','Virada TOTVS nuvem para produção','Virada TOTVS nuvem para produção','0',to_date('02/01/17','DD/MM/RR'),to_date('03/01/17','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','39','LCOSTA','Férias Coletivas','Férias coletivas de carnaval...','0',to_date('20/02/17','DD/MM/RR'),to_date('05/03/17','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','13','LCOSTA','Externo - Motivo Particular','"Vou estar ausente a partir das 14hs porque tenho de finalizar o tratamento dentário, ok!"','0',to_date('15/08/16','DD/MM/RR'),to_date('15/08/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','23','LCOSTA','Ausência por motivo particular','Tenho um compromisso na escola dos meus filhos e devo chegar mais tarde mas a tempo para a reunião ok!','0',to_date('23/09/16','DD/MM/RR'),to_date('23/09/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','27','LCOSTA','Feriado Troca 12/10','"Vamos emendar o feriado, trabalhamos no dia 12/10 para folgar hoje!"','0',to_date('14/11/16','DD/MM/RR'),to_date('14/11/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','30','LCOSTA','Igor | José Luís',null,'0',to_date('27/10/16','DD/MM/RR'),to_date('27/10/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','34','LCOSTA','Feriado N. Sra. Conceição',null,'0',to_date('08/12/16','DD/MM/RR'),to_date('08/12/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','40','LCOSTA','Máquina MNSAD03 entregue',null,'0',to_date('06/02/17','DD/MM/RR'),to_date('06/02/17','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','4','IGORM','Dados TI Manaus','"Enviar dados TI Manaus
+(Índices e custo)"','0',to_date('05/08/16','DD/MM/RR'),to_date('05/08/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','28','LCOSTA','Igor | José Luís','Escala de trabalho TI Manaus','0',to_date('25/10/16','DD/MM/RR'),to_date('25/10/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','15','MILENE','Inventário de Ativos Fixos','"Criar o Inventário Semestral de Ativos Fixos - Microservice
+Período: 03 a 31/10/2016"','0',to_date('29/09/16','DD/MM/RR'),to_date('30/09/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','19','LCOSTA','Magélio | José Luís','Horário Comercial','0',to_date('02/09/16','DD/MM/RR'),to_date('02/09/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','33','LCOSTA','Feriado Proclamação República',null,'0',to_date('15/11/16','DD/MM/RR'),to_date('15/11/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','35','LCOSTA','Feriado ANV Manaus',null,'0',to_date('24/10/16','DD/MM/RR'),to_date('24/10/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','36','LCOSTA','Visita Fernando (MIR Consultoria)','Refinamento do Projeto Cloud IAAS','0',to_date('07/11/16','DD/MM/RR'),to_date('07/11/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','21','LCOSTA','Igor | José Luís','Horário Comercial','0',to_date('06/09/16','DD/MM/RR'),to_date('06/09/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','16','LCOSTA','Visita Prodam','"Conhecer serviços que a PRODAM presta para empresas privadas, principalmente IAAS."','0',to_date('29/08/16','DD/MM/RR'),to_date('26/08/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','32','LCOSTA','Feriado Finados',null,'0',to_date('02/11/16','DD/MM/RR'),to_date('02/11/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','25','LCOSTA','Final Inventário AF','Prazo final do inventário de ativos da Microservice Manaus.','0',to_date('31/10/16','DD/MM/RR'),to_date('07/10/16','DD/MM/RR'));
+Insert into WS4TI.CLIENTE_AGENDA (ID_CLIENTE,SQ_AGENDA,CD_USUARIO,DS_TITULO,DS_DESCRICAO,NR_OS,DT_INI,DT_FIM) values ('1','22','LCOSTA','Reunião Equipe TI',null,'0',to_date('16/09/16','DD/MM/RR'),to_date('09/09/16','DD/MM/RR'));
