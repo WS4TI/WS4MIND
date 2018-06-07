@@ -2,7 +2,7 @@
 --  DDL for Package PCK_ORDEM_SERVICO
 --------------------------------------------------------
 
-  CREATE OR REPLACE EDITIONABLE PACKAGE "WS4TI"."PCK_ORDEM_SERVICO" AS
+CREATE OR REPLACE PACKAGE pck_ordem_servico AS
 
    PROCEDURE pr_evento(p_id_cliente IN cliente_os_evento.id_cliente%TYPE
                       ,p_id_os      IN cliente_os_evento.id_os%TYPE
@@ -35,6 +35,9 @@
                                   ,p_dt_fim_periodo DATE DEFAULT SYSDATE) RETURN NUMBER;
 
    FUNCTION fu_showdate(p_qt_seg IN NUMBER) RETURN VARCHAR2;
+
+   FUNCTION fu_create_cklist(p_id_cliente IN NUMBER
+                            ,p_cd_maquina VARCHAR2) RETURN BOOLEAN;
 
 END pck_ordem_servico;
 
