@@ -2,7 +2,7 @@
 --  DDL for Package Body PCK_ORDEM_SERVICO
 --------------------------------------------------------
 
-  CREATE OR REPLACE EDITIONABLE PACKAGE BODY "WS4TI"."PCK_ORDEM_SERVICO" AS
+CREATE OR REPLACE PACKAGE BODY pck_ordem_servico AS
 
    ------------------------------------------------------------------------------------------ 
    -- @autor:      jose.costa 
@@ -337,11 +337,10 @@
             EXCEPTION
                WHEN OTHERS THEN
                   BEGIN
-                     PR_SEND_MAIL( P_TITULO => 'Erro LOG de OS. programada !',
-                                   P_MENSAGEM => 'Código do Erro: ' || SQLCODE || ' | Favor verificar!',
-                                   P_DE => 'contato.ws4ti@gmail.com',
-                                   P_PARA => 'costafortes@gmail.com'
-                                 );
+                     pr_send_mail(p_titulo   => 'Erro LOG de OS. programada !'
+                                 ,p_mensagem => 'Código do Erro: ' || SQLCODE || ' | Favor verificar!'
+                                 ,p_de       => 'contato.ws4ti@gmail.com'
+                                 ,p_para     => 'costafortes@gmail.com');
                   EXCEPTION
                      WHEN OTHERS THEN
                         NULL;
@@ -404,11 +403,10 @@
                          WHERE id_cliente = p_id_cliente
                            AND id_os = v_id_os;
                         --      
-                        PR_SEND_MAIL( P_TITULO => 'Erro na criação automatica de OS. programada !',
-                                      P_MENSAGEM => 'Código do Erro: ' || SQLCODE || ' | Favor verificar!',
-                                      P_DE => 'contato.ws4ti@gmail.com',
-                                      P_PARA => 'costafortes@gmail.com'
-                                    );                        
+                        pr_send_mail(p_titulo   => 'Erro na criação automatica de OS. programada !'
+                                    ,p_mensagem => 'Código do Erro: ' || SQLCODE || ' | Favor verificar!'
+                                    ,p_de       => 'contato.ws4ti@gmail.com'
+                                    ,p_para     => 'costafortes@gmail.com');
                      EXCEPTION
                         WHEN OTHERS THEN
                            NULL;
@@ -456,28 +454,26 @@
       LOOP
          IF reg.email IS NOT NULL THEN
             BEGIN
-                --      
-                PR_SEND_MAIL( P_TITULO => 'Favor Fechar ou Reabrir OS nº ' || reg.os || ' !' ,
-                              P_MENSAGEM => 'Mensagem enviada automaticamente pelo Sistema de OS.' || chr(10) || chr(10) || 'OS. Nº: ' || reg.os || ' foi atendida em ' || reg.finalizada || 
-                                             ' mais ainda não foi fechada ou reaberta!' || chr(10) || 'Tempo de espera: ' || reg.esperando || chr(10) || 'Status: ''Atendida''' || chr(10) || 'Máquina: ' || 
-                                             reg.maquina || chr(10) || 'Setor Solicitante: ' || reg.setor || chr(10) || 'Descrição do Serviço: ' || reg.servico,
-                              P_DE => 'contato.ws4ti@gmail.com',
-                              P_PARA => 'costafortes@gmail.com'
-                            );              
+               --      
+               pr_send_mail(p_titulo   => 'Favor Fechar ou Reabrir OS nº ' || reg.os || ' !'
+                           ,p_mensagem => 'Mensagem enviada automaticamente pelo Sistema de OS.' || chr(10) || chr(10) || 'OS. Nº: ' || reg.os || ' foi atendida em ' || reg.finalizada ||
+                                          ' mais ainda não foi fechada ou reaberta!' || chr(10) || 'Tempo de espera: ' || reg.esperando || chr(10) || 'Status: ''Atendida''' || chr(10) || 'Máquina: ' ||
+                                          reg.maquina || chr(10) || 'Setor Solicitante: ' || reg.setor || chr(10) || 'Descrição do Serviço: ' || reg.servico
+                           ,p_de       => 'contato.ws4ti@gmail.com'
+                           ,p_para     => 'costafortes@gmail.com');
             EXCEPTION
                WHEN OTHERS THEN
                   NULL;
             END;
          ELSE
             BEGIN
-                --      
-                PR_SEND_MAIL( P_TITULO => 'Favor Fechar ou Reabrir OS nº ' || reg.os || ' !' ,
-                              P_MENSAGEM => 'Mensagem enviada automaticamente pelo Sistema de OS.' || chr(10) || chr(10) || 'OS. Nº: ' || reg.os || ' foi atendida em ' || reg.finalizada || 
-                                             ' mais ainda não foi fechada ou reaberta!' || chr(10) || 'Tempo de espera: ' || reg.esperando || chr(10) || 'Status: ''Atendida''' || chr(10) || 'Máquina: ' || 
-                                             reg.maquina || chr(10) || 'Setor Solicitante: ' || reg.setor || chr(10) || 'Descrição do Serviço: ' || reg.servico,
-                              P_DE => 'contato.ws4ti@gmail.com',
-                              P_PARA => 'costafortes@gmail.com'
-                            );          
+               --      
+               pr_send_mail(p_titulo   => 'Favor Fechar ou Reabrir OS nº ' || reg.os || ' !'
+                           ,p_mensagem => 'Mensagem enviada automaticamente pelo Sistema de OS.' || chr(10) || chr(10) || 'OS. Nº: ' || reg.os || ' foi atendida em ' || reg.finalizada ||
+                                          ' mais ainda não foi fechada ou reaberta!' || chr(10) || 'Tempo de espera: ' || reg.esperando || chr(10) || 'Status: ''Atendida''' || chr(10) || 'Máquina: ' ||
+                                          reg.maquina || chr(10) || 'Setor Solicitante: ' || reg.setor || chr(10) || 'Descrição do Serviço: ' || reg.servico
+                           ,p_de       => 'contato.ws4ti@gmail.com'
+                           ,p_para     => 'costafortes@gmail.com');
             EXCEPTION
                WHEN OTHERS THEN
                   NULL;
@@ -486,15 +482,14 @@
          -- Conforme conversamos o tempo para o fechamento automático das OS atendidas é de 48 horas. 
          IF reg.esperando_hh > 24 AND reg.esperando_hh < 72 THEN
             BEGIN
-                --      
-                PR_SEND_MAIL( P_TITULO => 'Favor Fechar ou Reabrir OS nº ' || reg.os || ' !' ,
-                              P_MENSAGEM => 'Favor Fechar ou Reabrir OS nº ' || reg.os || ' !' || chr(10) || chr(10) || 'Favor Fechar ou Reabrir OS nº ' || reg.os || ' !' || chr(10) || 
-                                            'Mensagem enviada automaticamente pelo Sistema de OS.' || chr(10) || chr(10) || 'OS. Nº: ' || reg.os || ' foi atendida em ' || reg.finalizada || 
-                                            ' mais ainda não foi fechada ou reaberta!' || chr(10) || 'Tempo de espera: ' || reg.esperando || chr(10) || 'Status: ''Atendida''' || chr(10) || 'Máquina: ' || 
-                                            reg.maquina || chr(10) || 'Setor Solicitante: ' || reg.setor || chr(10) || 'Descrição do Serviço: ' || reg.servico,
-                              P_DE => 'contato.ws4ti@gmail.com',
-                              P_PARA => 'costafortes@gmail.com'
-                            );                 
+               --      
+               pr_send_mail(p_titulo   => 'Favor Fechar ou Reabrir OS nº ' || reg.os || ' !'
+                           ,p_mensagem => 'Favor Fechar ou Reabrir OS nº ' || reg.os || ' !' || chr(10) || chr(10) || 'Favor Fechar ou Reabrir OS nº ' || reg.os || ' !' || chr(10) ||
+                                          'Mensagem enviada automaticamente pelo Sistema de OS.' || chr(10) || chr(10) || 'OS. Nº: ' || reg.os || ' foi atendida em ' || reg.finalizada ||
+                                          ' mais ainda não foi fechada ou reaberta!' || chr(10) || 'Tempo de espera: ' || reg.esperando || chr(10) || 'Status: ''Atendida''' || chr(10) || 'Máquina: ' ||
+                                          reg.maquina || chr(10) || 'Setor Solicitante: ' || reg.setor || chr(10) || 'Descrição do Serviço: ' || reg.servico
+                           ,p_de       => 'contato.ws4ti@gmail.com'
+                           ,p_para     => 'costafortes@gmail.com');
             EXCEPTION
                WHEN OTHERS THEN
                   raise_application_error(-20001, SQLERRM);
@@ -607,6 +602,48 @@
       --
       RETURN l_result;
    END fu_showdate;
+
+   ------------------------------------------------------------------------------------------
+   -- @autor:      jose.costa
+   -- @descrição:  Cria um check list base para o master detail cklist x cklist_item
+   -- @data:       07/06/2018
+   ------------------------------------------------------------------------------------------
+   FUNCTION fu_create_cklist(p_id_cliente IN NUMBER
+                            ,p_cd_maquina VARCHAR2) RETURN BOOLEAN AS
+      v_count NUMBER(2);
+   BEGIN
+      /*Verifica se já existe */
+      BEGIN
+         SELECT COUNT(1)
+           INTO v_count
+           FROM cliente_maquina_cklist
+          WHERE id_cliente = p_id_cliente
+            AND cd_maquina = p_cd_maquina;
+      EXCEPTION
+         WHEN OTHERS THEN
+            raise_application_error(-20099, 'Erro consultando Check List!' || ' | ' || SQLERRM);
+      END;
+      --
+      IF v_count = 0 THEN
+         BEGIN
+            INSERT INTO cliente_maquina_cklist
+               (id_cliente
+               ,cd_maquina
+               ,ds_obs
+               ,dt_checklist
+               ,st_checklist)
+            VALUES
+               (p_id_cliente
+               ,p_cd_maquina
+               ,NULL
+               ,SYSDATE
+               ,'I');
+         EXCEPTION
+            WHEN OTHERS THEN
+               raise_application_error(-20099, 'Erro criando Check List!' || ' | ' || SQLERRM);
+         END;
+      END IF;
+   END fu_create_cklist;
 
 END;
 
