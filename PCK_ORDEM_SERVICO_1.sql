@@ -642,7 +642,12 @@ CREATE OR REPLACE PACKAGE BODY pck_ordem_servico AS
             WHEN OTHERS THEN
                raise_application_error(-20099, 'Erro criando Check List!' || ' | ' || SQLERRM);
          END;
+      ELSE
+        RETURN false;
       END IF;
+      --
+      RETURN true;
+      --
    END fu_create_cklist;
 
 END;
